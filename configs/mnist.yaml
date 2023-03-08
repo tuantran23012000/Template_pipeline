@@ -1,0 +1,18 @@
+PROJECT_NAME: 'train_mnist' #resnet_50_split_1.WF3: data_format_relabel_merge_9att_new_label
+
+TRAIN:
+  BATCH_SIZE: 64
+  EPOCH: 10
+  OPTIMIZER:
+    TYPE: 'adadelta'
+    WEIGHT_DECAY: 5e-4
+    LR: 0.0001
+  LR_SCHEDULER:
+    TYPE: 'steplr'
+    GAMMA: 0.7
+  GPUS:
+    USE_GPU: True
+    GPU_ID: "0"
+  NUM_WORKERS: 4
+SAVE_MODEL_DIR: "/home/tuantran/test_code_pipeline/last_model.pkl"
+
