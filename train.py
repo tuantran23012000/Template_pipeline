@@ -21,7 +21,7 @@ class Train_pipeline():
                 "learning_rate_init": self.cfgs["TRAIN"]["OPTIMIZER"]["LR"],
                 "batch_size": self.cfgs["TRAIN"]["BATCH_SIZE"]
             }
-            wandb.init(project = self.cfgs["PROJECT_NAME"], entity = "ai-",config=config)
+            wandb.init(project = self.cfgs["PROJECT_NAME"], entity = "ai-iot",config=config)
         # setting device 
         self.gpu = self.cfgs["TRAIN"]["GPUS"]["USE_GPU"]
         if self.gpu:
